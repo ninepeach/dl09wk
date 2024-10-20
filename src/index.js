@@ -3,7 +3,7 @@
 /**
  * Configuration
  */
-const PREFIX_ACCESS = '/zmkm'; // Access protection prefix
+const PREFIX_ACCESS = '/n4spd'; // Access protection prefix
 const PREFIX_GH = '/gh/';  // Prefix for GitHub routing
 
 /**
