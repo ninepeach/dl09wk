@@ -3,7 +3,7 @@
 /**
  * Configuration
  */
-const PREFIX_ACCESS = '/n4spd'; // Access protection prefix
+const PREFIX_ACCESS = '/3lwqk'; // Access protection prefix
 const PREFIX_GH = '/gh/';  // Prefix for GitHub routing
 
 /**
@@ -175,17 +175,17 @@ function generateUsageGuide() {
             <p>Use the following endpoints to access GitHub releases:</p>
             <h2>GitHub Releases</h2>
             <pre>
-<code>https://dl09.net/zmkm/gh/user/repo@version/file</code>
+<code>https://dl09.net/3lwqk/gh/user/repo@version/file</code>
             </pre>
             <p>Examples:</p>
             <pre>
-<code>https://dl09.net/zmkm/gh/containerd/containerd@v1.6.4/cri-containerd-cni-1.6.4-linux-amd64.tar.gz</code>
+<code>https://dl09.net/3lwqk/gh/containerd/containerd@v1.6.4/cri-containerd-cni-1.6.4-linux-amd64.tar.gz</code>
             </pre>
             <pre>
-<code>https://dl09.net/zmkm/gh/jquery/jquery@3.6.4/dist/jquery.min.js</code>
+<code>https://dl09.net/3lwqk/gh/jquery/jquery@3.6.4/dist/jquery.min.js</code>
             </pre>
             <pre>
-<code>https://dl09.net/zmkm/gh/nginx/nginx@1.2.6/CHANGELOG</code>
+<code>https://dl09.net/3lwqk/gh/nginx/nginx@1.2.6/CHANGELOG</code>
             </pre>
             <h2>Notes</h2>
             <ul>
