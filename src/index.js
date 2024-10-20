@@ -51,7 +51,6 @@ async function handleRequest(request) {
  * @returns {Promise<Response>}
  */
 async function handleGitHubRequest(path, request) {
-
     // Match for GitHub releases download
     const releaseMatch = path.match(/^\/gh\/([^\/]+)\/([^\/]+)\/releases\/download\/([^\/]+)\/(.*)$/);
     
@@ -76,25 +75,17 @@ async function handleGitHubRequest(path, request) {
     } else if (versionMatch) {
         // If it's a version match
         [, user, repo, version, filePath] = versionMatch;
-        // Construct the GitHub URL for the versioned request
         const githubUrl = `https://github.com/${user}/${repo}/raw/refs/tags/${version}/${filePath}`;
-
-        // Fetch the file from the constructed URL
         return await fetchWithCors(githubUrl, request);
     } else if (blobMatch) {
         // If it's a blob match
         [, user, repo, version, filePath] = blobMatch;
-        // Construct the GitHub URL for the blob request
         const githubUrl = `https://raw.githubusercontent.com/${user}/${repo}/${version}/${filePath}`;
-
-        // Fetch the file from the constructed URL
         return await fetchWithCors(githubUrl, request);
     } else if (rawMatch) {
         // If it's a raw match, construct the URL directly
         [, user, repo, version, filePath] = rawMatch;
         const githubUrl = `https://raw.githubusercontent.com/${user}/${repo}/${version}/${filePath}`;
-
-        // Fetch the file from the constructed URL
         return await fetchWithCors(githubUrl, request);
     }
 
@@ -206,3 +197,10 @@ function generateUsageGuide() {
         </html>
     `;
 }
+
+/**
+ * 默认导出
+ */
+export default {
+    fetch: handleRequest,
+};
